@@ -1,0 +1,119 @@
+	html {
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+		}
+  
+    body {
+      background-color: black;
+    }
+
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 80%;
+			margin: 3rem auto;
+		}
+
+
+    header h1 {
+      color: white;
+    }
+
+
+
+		nav ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+		}
+
+		nav ul a {
+			text-decoration: none;
+			color: white;
+		} 
+
+		.btn {
+			color: white;
+			background-color: #6E32EF;
+			display: inline-block;
+			padding: .75rem 1.5rem;
+			border-radius: .5rem;
+	  	border: 1px solid #6E32EF;
+      position: absolute, 100% 100%;
+		}
+
+		/* Air */
+
+    .btn {
+      /*transition-property: background-color;
+      transition-duration: .4s;
+      transition-timing-function: ease-in-out; */      
+
+      border-radius: 1cm;
+      transition: background-color .4s ease-in-out,
+        border-color .4s ease-in-out,
+        border-radius .2s ease-in-out;
+    }
+
+    .btn:hover {
+      background-color: white;
+      color: #151618;
+      border-color: #151618;
+      border-radius: 0.25cm;
+    }
+
+    .menu {
+      width:  15cm;
+    }
+
+    .name h1 {
+      position: absolute;
+      left: 50%;
+      font-size: 300px;
+      color: white;
+      font-weight: 200;
+      display: inline-block;
+      padding: 10px;
+      inline-size: 30cm;
+      white-space: nowrap;
+      transition: left .4s ease-in-out;
+    }
+
+    .name h1:hover {
+      left: 0%;
+    }
+
+    .menuitem {
+      position: relative;
+      color: white;
+      font-size: 5rem;
+      font-family: "Space Mono", monospace;
+      inline-size: 15cm;
+      padding: 0, 20px;
+      margin: 0px;
+      border: 0px;
+      right: 0;
+      white-space: nowrap;
+      transition: right .2s ease-in-out, opacity .2s ease-in-out;
+    }
+    
+    .menuitem:hover {
+      right: -40px;
+
+      
+    }
+
+    .menu:hover .menuitem {
+			opacity: 0.5; /* Darken all items */
+		}
+
+		/* Restore opacity for the hovered item */
+		.menu:hover .menuitem:hover {
+			opacity: 1; /* Keep the hovered item fully visible */
+		}
+
