@@ -3,6 +3,18 @@ const toggleNav = () => {
   document.body.dataset.nav = document.body.dataset.nav === "true" ? "false" : "true";
 }
 
+const blob = document.getElementById("blob");
+
+document.body.onpointermove = event => {
+  const { clientX, clientY } = event;
+
+  blob.animate({
+    left: `${clientX}px`,
+    top: `${clientY}px`
+  }, { duration: 3000, fill: "forwards" });
+}
+
+
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 // Select all elements with the class `menuitem`
@@ -54,3 +66,4 @@ document.querySelectorAll(".menuitem").forEach(menuitem => {
     }
   }, 50); // Adjust the interval time as needed
 });
+

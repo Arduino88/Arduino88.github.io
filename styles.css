@@ -10,7 +10,9 @@
       left: 0px;
       right: 0px;
       margin: 0px;
-      padding: 20px;
+      padding: 0px;
+      height: 100%;
+      width: 100%;
     }
 
 		header {
@@ -19,6 +21,7 @@
 			align-items: center;
 			width: 80%;
 			margin: 3rem auto;
+      z-index: 3;
 		}
 
 
@@ -41,6 +44,50 @@
 			text-decoration: none;
 			color: white;
 		} 
+
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg) scale(1, 1); /* Ensure you use transform here */
+      }
+
+      50% {
+        transform: rotate(180deg) scale(1, 1.5);
+      }
+
+      to {
+        transform: rotate(360deg) scale(1, 1); /* This applies the 360-degree rotation */
+      }
+    }
+
+
+    #blob {
+      background-color: white;
+      height: 500px;
+      aspect-ratio: 1;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+      border-radius: 50%;
+      background: linear-gradient(
+      to right, 
+      aquamarine,
+      mediumpurple
+      );
+      animation: rotate 20s infinite;
+      z-index: -2;
+
+    }
+   
+    #blur {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      padding: 0px;
+      z-index: -1;
+      backdrop-filter: blur(200px);
+    }
 
 		.btn {
 			color: white;
@@ -72,20 +119,40 @@
       border-radius: 0.25cm;
     }
 
+    .main_body {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: -100;
+    }
+
     .menu {
       width:  15cm;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 2;
+      padding-left: 20px;
+    }
+
+    .name {
+      display: flex;
+      justify-content: flex-end;
     }
 
     .name h1 {
       position: relative;
-      left: 50%;
-      font-size: 300px;
+      font-size: 220px;
       color: white;
       font-weight: 200;
-      display: inline-block;
       padding: 10px;
-      inline-size: 30cm;
       white-space: nowrap;
+      margin: 0px 20px;
       transition: left .4s ease-in-out;
     }
 
