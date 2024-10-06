@@ -150,6 +150,11 @@
       background-clip: text;
       color: transparent;
       z-index: 2;
+      transition: all .4s;
+    }
+
+    .summary strong:hover {
+      font-size: 100pt;
     }
 
 
@@ -168,7 +173,6 @@
       transition: right .2s ease-in-out, opacity .2s ease-in-out;
     }
       
-
 
     
   .menuitem a {
@@ -190,14 +194,7 @@
     flex-direction: column;
   }
 
-  .menuitem {
-    font-size: 5rem;
-    font-family: "Space Mono", monospace;
-    padding: 0 20px;
-    margin: 0;
-    white-space: nowrap;
-    transition: right .2s ease-in-out, opacity .2s ease-in-out;
-  }
+
 
   .menuitem:hover {
     right: -40px;
