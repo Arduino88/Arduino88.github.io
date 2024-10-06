@@ -163,14 +163,14 @@
       position: relative;
       color: white;
       font-size: 5rem;
-      font-family: "Space Mono", monospace;
+
       inline-size: 15cm;
       padding: 0, 20px;
       margin: 0px;
       border: 0px;
       right: 0;
       white-space: nowrap;
-      transition: right .2s ease-in-out, opacity .2s ease-in-out;
+      transition: all .2s ease-in-out;
     }
       
 
@@ -185,10 +185,6 @@
 
   }
 
-  .menuitem a:hover {
-    color: aquamarine; /* Changes color on hover for effect */
-  }
-
   .menu {
     display: flex;
     flex-direction: column;
@@ -198,6 +194,7 @@
 
   .menuitem:hover {
     right: -40px;
+    font-size: 100px;
   }
 
     .menu:hover .menuitem {
