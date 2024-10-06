@@ -126,14 +126,10 @@
 
       font-size: 220px;
       color: white;
-      font-weight: 200;
+      font-weight: 300;
       padding: 10px;
       margin: 0px 20px;
       transition: left .4s ease-in-out;
-    }
-
-    .name h1:hover {
-      left: 0%;
     }
 
     .summary {
@@ -144,14 +140,16 @@
     }
 
 
-    .summary strong {
-      background: linear-gradient(to top left, aquamarine, mediumpurple);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      z-index: 2;
-      transition: all .4s;
-    }
+
+  .summary strong {
+    background: linear-gradient(to top left, rgba(127, 255, 212, 0.8), rgba(147, 112, 219, 0.8));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    z-index: 2;
+    transition: all .4s;
+  }
+
 
     .summary strong:hover {
       font-size: 100pt;
