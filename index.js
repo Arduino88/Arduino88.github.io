@@ -7,10 +7,15 @@ const blob = document.getElementById("blob");
 
 document.body.onpointermove = event => {
   const { clientX, clientY } = event;
+  
+  // Get the scroll positions
+  const scrollX = window.scrollX;
+  const scrollY = window.scrollY;
 
+  // Adjust the blob's position to account for scroll
   blob.animate({
-    left: `${clientX}px`,
-    top: `${clientY}px`
+    left: `${clientX + scrollX}px`,
+    top: `${clientY + scrollY}px`
   }, { duration: 3000, fill: "forwards" });
 }
 

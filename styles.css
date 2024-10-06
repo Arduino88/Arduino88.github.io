@@ -15,15 +15,6 @@
       width: 100%;
     }
 
-		header {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			width: 80%;
-			margin: 3rem auto;
-      z-index: 3;
-		}
-
 
     header h1 {
       color: white;
@@ -75,21 +66,24 @@
       aquamarine,
       mediumpurple
       );
-      animation: rotate 20s infinite;
+      animation: rotate 20s infinite linear;
       z-index: -2;
+      opacity: 50%;
 
     }
    
-    #blur {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      padding: 0px;
-      z-index: -1;
-      backdrop-filter: blur(200px);
-    }
+#blur {
+  position: fixed; /* Stay fixed to the viewport */
+  top: 0;
+  left: 0;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  padding: 0;
+  z-index: -1; /* Send behind other content */
+  backdrop-filter: blur(200px);
+}
 
-		.btn {
+.btn {
 			color: white;
 			background-color: #6E32EF;
 			display: inline-block;
@@ -142,22 +136,27 @@
 
     .name {
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
     }
 
     .name h1 {
-      position: relative;
+
       font-size: 220px;
       color: white;
       font-weight: 200;
       padding: 10px;
-      white-space: nowrap;
       margin: 0px 20px;
       transition: left .4s ease-in-out;
     }
 
     .name h1:hover {
       left: 0%;
+    }
+
+    .aboutme {
+      color: white;
+      font-size: 50;
+      margin-bottom: 150px;
     }
 
     .menuitem {
@@ -173,12 +172,41 @@
       white-space: nowrap;
       transition: right .2s ease-in-out, opacity .2s ease-in-out;
     }
-    
-    .menuitem:hover {
-      right: -40px;
-
       
+    .aboutme {
+      font-size: 100pt;
     }
+
+    
+  .menuitem a {
+    text-decoration: none; /* Removes underline */
+    color: white; /* Sets the text color */
+    display: inline-block; /* Makes the anchor span the content */
+    width: 100%; /* Ensures the clickable area spans the full width */
+    height: 100%; /* Ensures the clickable area spans the full height */
+  }
+
+  .menuitem a:hover {
+    color: aquamarine; /* Changes color on hover for effect */
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menuitem {
+    font-size: 5rem;
+    font-family: "Space Mono", monospace;
+    padding: 0 20px;
+    margin: 0;
+    white-space: nowrap;
+    transition: right .2s ease-in-out, opacity .2s ease-in-out;
+  }
+
+  .menuitem:hover {
+    right: -40px;
+  }
 
     .menu:hover .menuitem {
 			opacity: 0.5; /* Darken all items */
