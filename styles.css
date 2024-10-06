@@ -35,7 +35,13 @@
 			text-decoration: none;
 			color: white;
 		} 
-
+  
+    .summary strong {
+      background: linear-gradient(to top left, aquamarine, mediumpurple);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
 
     @keyframes rotate {
       from {
@@ -95,23 +101,7 @@
 
 		/* Air */
 
-    .btn {
-      /*transition-property: background-color;
-      transition-duration: .4s;
-      transition-timing-function: ease-in-out; */      
 
-      border-radius: 1cm;
-      transition: background-color .4s ease-in-out,
-        border-color .4s ease-in-out,
-        border-radius .2s ease-in-out;
-    }
-
-    .btn:hover {
-      background-color: white;
-      color: #151618;
-      border-color: #151618;
-      border-radius: 0.25cm;
-    }
 
     .main_body {
       display: flex;
@@ -153,10 +143,10 @@
       left: 0%;
     }
 
-    .aboutme {
+    .summary {
       color: white;
-      font-size: 50;
       margin-bottom: 150px;
+      font-size: 100pt;
     }
 
     .menuitem {
@@ -173,9 +163,7 @@
       transition: right .2s ease-in-out, opacity .2s ease-in-out;
     }
       
-    .aboutme {
-      font-size: 100pt;
-    }
+
 
     
   .menuitem a {
