@@ -37,13 +37,6 @@
 			color: white;
 		} 
   
-    .summary strong {
-      background: linear-gradient(to top left, aquamarine, mediumpurple);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
     @keyframes rotate {
       from {
         transform: rotate(0deg) scale(1, 1); /* Ensure you use transform here */
@@ -149,6 +142,17 @@
       font-size: 80pt;
       padding: 0cm 2cm;
     }
+
+
+    .summary strong {
+      background: linear-gradient(to top left, aquamarine, mediumpurple);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      z-index: 2;
+    }
+
+
 
     .menuitem {
       position: relative;
